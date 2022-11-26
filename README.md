@@ -3,7 +3,7 @@
 ### The usage of data set
 
 The structure of /dataset:  
-
+```
 ——datasets  
 
  |——train  
@@ -16,7 +16,7 @@ The structure of /dataset:
 
  |——watermark.zip  
 
-
+```
 **datasets/train** contains clean images for training model.
 
 **datasets/test.zip** contains clean images for testing model. 
