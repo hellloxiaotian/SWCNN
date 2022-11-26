@@ -3,12 +3,18 @@
 ### The usage of data set
 
 The structure of /dataset:
-		—— datasets
-   				|——train
-     						 |——train_data1.zip
-      						|——train_data2.zip
-   				|——test.zip
-   				|——watermark.zip
+		—— datasets  
+
+   				|——train  
+
+     						|——train_data1.zip  
+
+      						|——train_data2.zip  
+
+   				|——test.zip  
+
+   				|——watermark.zip  
+
 
 **datasets/train** contains clean images for training model.
 
