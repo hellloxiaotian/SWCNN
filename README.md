@@ -27,4 +27,4 @@ The structure of /dataset:
 
 *datasets/watermark.zip* and *datasets/test.zip* are used to test image watermark removal models.
 
-Please refer to **def add_watermark_noise(img_train, occupancy=50, self_surpervision=False, same_random=0, alpha=0.3): in utils.py** for the code of synthesizing watermark images.
+Please refer to *def add_watermark_noise(img_train, occupancy=50, self_surpervision=False, same_random=0, alpha=0.3): in utils.py* for the code of synthesizing watermark images.
