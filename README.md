@@ -4,17 +4,17 @@
 
 The structure of /dataset:  
 ```
-——datasets  
+—— datasets  
 
- |——train  
+   |——train  
 
-   |——train_data1.zip  
+       |——train_data1.zip  
 
-   |——train_data2.zip  
+       |——train_data2.zip  
 
- |——test.zip  
+   |——test.zip  
 
- |——watermark.zip  
+   |——watermark.zip  
 
 ```
 **datasets/train** contains clean images for training model.
