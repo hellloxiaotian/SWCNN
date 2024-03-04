@@ -1,0 +1,5 @@
+
+
+train_model_out_path_SWCNN: data/models_SWCNN
+train_data_path: data
+models:
