@@ -22,11 +22,11 @@
 
 ### Training datasets
 
-#### The training dataset of the PASCAL VOC 2012 can be obtained at 链接：https://pan.baidu.com/s/1At7c2egxalV1T8HpBGGQdw (56r7)
+#### The training dataset of the PASCAL VOC 2012 can be obtained at 链接：https://pan.baidu.com/s/1At7c2egxalV1T8HpBGGQdw (56r7) or https://drive.google.com/drive/folders/1Byi-wwGwks69fItGesEHDBdgUr1xGFc5?usp=drive_link (Google drive).
 
 ## Command
 
-Download model file at 链接：链接：https://pan.baidu.com/s/1UbnK2F1FuIMKvqESNk5SvA  (passwd: jlbv) and put `data`/  into `SWCNN/`
+Download model file at 链接：链接：https://pan.baidu.com/s/1UbnK2F1FuIMKvqESNk5SvA  (passwd: jlbv) and put `data`/  into `SWCNN/` or https://drive.google.com/drive/folders/1Byi-wwGwks69fItGesEHDBdgUr1xGFc5?usp=drive_link (Google drive).
 
 ### Test
 
