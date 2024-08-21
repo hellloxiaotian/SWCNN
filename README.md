@@ -26,7 +26,7 @@
 
 ## Command
 
-Download model file at 链接：链接：https://pan.baidu.com/s/1UbnK2F1FuIMKvqESNk5SvA  (passwd: jlbv) and put `data`/  into `SWCNN/` or https://drive.google.com/drive/folders/1Byi-wwGwks69fItGesEHDBdgUr1xGFc5?usp=drive_link (Google drive).
+Download model file at 链接：https://pan.baidu.com/s/1P-Z2fHIwUXIqghpH5gykkg (passwd: iu5i) and put `data`/  into `SWCNN/` or https://drive.google.com/drive/folders/1Byi-wwGwks69fItGesEHDBdgUr1xGFc5?usp=drive_link (Google drive).
 
 ### Test
 
