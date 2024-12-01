@@ -59,7 +59,7 @@ def prepare_data(data_path, patch_size, stride, aug_times=1, mode='gray'):
             if mode == 'color':
                 if int(h * scales[k]) < 256 or int(w * scales[k]) < 256:
                     continue
-            Img = cv2.resize(img, (int(h * scales[k]), int(w * scales[k])), interpolation=cv2.INTER_CUBIC)
+            Img = cv2.resize(img, (int(w * scales[k]), int(h * scales[k])), interpolation=cv2.INTER_CUBIC)
             # Img = img.resize( (int(h * scales[k]), int(w * scales[k])))
             if mode =='gray':
                 Img = np.expand_dims(Img[:, :, 0].copy(), 0)
