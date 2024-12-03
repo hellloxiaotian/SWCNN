@@ -61,6 +61,14 @@ def batch_RMSE(img, imclean, data_range):
     return (MSE / Img.shape[0])
 
 
+def load_watermark(filepath, alpha):
+    watermark = Image.open(filepath).convert("RGBA")
+    r, g, b, a = watermark.split()
+    a = a.point(lambda i: int(i * alpha))
+    watermark = Image.merge("RGBA", (r, g, b, a))        
+    return watermark
+
+
 def add_watermark_noise(img_train, occupancy=50, self_surpervision=False, same_random=0, alpha=0.3):
     # 加载水印,水印应该是随机加入
     # random_img = random.randint(1, 13)
@@ -70,19 +78,8 @@ def add_watermark_noise(img_train, occupancy=50, self_surpervision=False, same_r
     if self_surpervision:
         random_img = same_random
     data_path = "watermark/translucence/"
-    watermark = Image.open(data_path + str(random_img) + ".png")
-    watermark = watermark.convert("RGBA")
-    w, h = watermark.size
-    # 设置水印透明度
-    for i in range(w):
-        for k in range(h):
-            color = watermark.getpixel((i, k))
-            if color[3] != 0:
-                transparence = int(255 * alpha)
-                # color = color[::-1]
-
-                color = color[:-1] + (transparence,)
-            watermark.putpixel((i, k), color)
+    filepath = f"{data_path}{str(random_img)}.png"
+    watermark = load_watermark(filepath, alpha)
     # watermark = watermark.convert("RGB")
     watermark_np = np.array(watermark)
     watermark_np = watermark_np[:, :, 0:3]
@@ -148,19 +145,8 @@ def add_watermark_noise_B(img_train, occupancy=50, self_surpervision=False, same
     if self_surpervision:
         random_img = same_random
     data_path = "watermark/translucence/"
-    watermark = Image.open(data_path + str(random_img) + ".png")
-    watermark = watermark.convert("RGBA")
-    w, h = watermark.size
-    # 设置水印透明度
-    alpha = 0.3 + random.randint(0, 70) * 0.01
-    for i in range(w):
-        for k in range(h):
-            color = watermark.getpixel((i, k))
-            if color[3] != 0:
-                transparence = int(255 * alpha)
-                # color = color[::-1]
-                color = color[:-1] + (transparence,)
-            watermark.putpixel((i, k), color)
+    filepath = f"{data_path}{str(random_img)}.png"
+    watermark = load_watermark(filepath, alpha)
     # watermark = watermark.convert("RGB")
     watermark_np = np.array(watermark)
     watermark_np = watermark_np[:, :, 0:3]
@@ -228,18 +214,8 @@ def add_watermark_noise_test(img_train, occupancy=50, img_id=3, scale_img=1.5, s
     if self_surpervision:
         random_img = same_random
     data_path = "watermark/translucence/"
-    watermark = Image.open(data_path + str(random_img) + ".png")
-    watermark = watermark.convert("RGBA")
-    w, h = watermark.size
-    # 设置水印透明度
-    for i in range(w):
-        for k in range(h):
-            color = watermark.getpixel((i, k))
-            if color[3] != 0:
-                transparence = int(255 * alpha)  # random.randint(100)
-                # color = color[::-1]
-                color = color[:-1] + (transparence,)
-            watermark.putpixel((i, k), color)
+    filepath = f"{data_path}{str(random_img)}.png"
+    watermark = load_watermark(filepath, alpha)
     # watermark = watermark.convert("RGB")
     watermark_np = np.array(watermark)
     watermark_np = watermark_np[:, :, 0:3]
